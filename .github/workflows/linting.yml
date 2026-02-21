@@ -6,22 +6,50 @@ on:
   - "push"
 
 jobs:
-  lint:
-    name:                         "Linting"
+  lint-ruby:
+    name:                         "Linting of Ruby code"
     runs-on:                      "ubuntu-latest"
 
     steps:
-      - name:                     "Cache Ruby"
-        uses:                     "actions/cache@v2"
-        with:
-          path:                   "vendor/bundle"
-          key:                    |
-            ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys:           |
-            ${{ runner.os }}-gems-
+      - name:                     "Checkout Code"
+        uses:                     "actions/checkout@v6"
+        timeout-minutes:          5
 
+      - name:                     "Build Ruby"
+        uses:                     "ruby/setup-ruby@v1"
+        with:
+          ruby-version:           "2.7"
+          bundler-cache:          true
+
+      - name:                     "Run Rubocop"
+        run:                      |
+          bundle exec rubocop --force-exclusion
+
+  lint-yaml:
+    name:                         "Linting of YAML"
+    runs-on:                      "ubuntu-latest"
+
+    steps:
+      - name:                     "Checkout Code"
+        uses:                     "actions/checkout@v6"
+        timeout-minutes:          5
+
+      - name:                     "Install Packages"
+        run:                      >
+          sudo apt install -y
+          yamllint
+
+      - name:                     "Run YAMLLint"
+        run:                      |
+          yamllint -f "github" -d ".yamllint" .
+
+  lint-markdown:
+    name:                         "Linting of MarkDown"
+    runs-on:                      "ubuntu-latest"
+
+    steps:
       - name:                     "Cache NodeJS"
-        uses:                     "actions/cache@v2"
+        uses:                     "actions/cache@v4"
         with:
           path:                   "~/.npm"
           key:                    |
@@ -30,16 +58,8 @@ jobs:
             ${{ runner.os }}-node-
 
       - name:                     "Checkout Code"
-        uses:                     "actions/checkout@v2"
+        uses:                     "actions/checkout@v6"
         timeout-minutes:          5
-        with:
-          fetch-depth:            0
-
-      - name:                     "Build Ruby"
-        uses:                     "ruby/setup-ruby@v1"
-        with:
-          ruby-version:           2.7
-          bundler-cache:          true
 
       - name:                     "Build Node"
 
@@ -137,19 +157,6 @@ jobs:
           stylelint
           stylelint-order
           stylelint-scss
-
-      - name:                     "Install Packages"
-        run:                      >
-          sudo apt install -y
-          yamllint
-
-      - name:                     "Run Rubocop"
-        run:                      |
-          rubocop --force-exclusion
-
-      - name:                     "Run YAMLLint"
-        run:                      |
-          yamllint -f "github" -d ".yamllint" .
 
       - name:                     "Run Remark"
         run:                      |
