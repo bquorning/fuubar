@@ -27,6 +27,8 @@ Gem::Specification.new do |spec|
     'wiki_uri'          => 'https://github.com/thekompanee/fuubar/wiki',
   }
 
+  spec.required_ruby_version = ">= 2.6"
+
   spec.add_dependency             'rspec-core',       ["~> 3.0"]
   spec.add_dependency             'ruby-progressbar', ["~> 1.4"]
 
