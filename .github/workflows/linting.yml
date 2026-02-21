@@ -29,15 +29,6 @@ jobs:
           restore-keys:           |
             ${{ runner.os }}-node-
 
-      - name:                     "Cache Python"
-        uses:                     "actions/cache@v2"
-        with:
-          path:                   "~/.cache/pip"
-          key:                    |
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys:           |
-            ${{ runner.os }}-pip-
-
       - name:                     "Checkout Code"
         uses:                     "actions/checkout@v2"
         timeout-minutes:          5
@@ -147,16 +138,9 @@ jobs:
           stylelint-order
           stylelint-scss
 
-      - name:                     "Install Python Eggs"
-        run:                      >
-          pip install --user
-          vim-vint
-
       - name:                     "Install Packages"
         run:                      >
           sudo apt install -y
-          shellcheck
-          tidy
           yamllint
 
       - name:                     "Run Rubocop"
