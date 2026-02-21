@@ -126,7 +126,7 @@ class Fuubar < ::RSpec::Core::Formatters::BaseTextFormatter
   end
 
   def output
-    @fuubar_output ||= ::Fuubar::Output.new(super, configuration.tty?) # rubocop:disable Naming/MemoizedInstanceVariableName
+    @fuubar_output ||= ::Fuubar::Output.new(super, configuration.color_enabled?) # rubocop:disable Naming/MemoizedInstanceVariableName
   end
 
   private

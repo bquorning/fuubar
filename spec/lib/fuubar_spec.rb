@@ -2,10 +2,9 @@
 
 require 'fuubar'
 require 'stringio'
-require 'ostruct'
 
 # rubocop:disable RSpec/MultipleMemoizedHelpers
-describe ::Fuubar do
+RSpec.describe ::Fuubar do
   let(:output) do
     io = ::StringIO.new
 
@@ -61,11 +60,11 @@ describe ::Fuubar do
 
   context 'when it is created' do
     it 'does not start the bar until the formatter is started' do
-      expect(formatter.progress).not_to be_started
+      expect(formatter.progress.started?).to be_falsey
 
       formatter.start(start_notification)
 
-      expect(formatter.progress).to be_started
+      expect(formatter.progress.started?).to be_truthy
     end
 
     it 'creates a new ProgressBar' do
