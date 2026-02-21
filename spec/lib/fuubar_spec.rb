@@ -2,7 +2,6 @@
 
 require 'fuubar'
 require 'stringio'
-require 'ostruct'
 
 # rubocop:disable RSpec/MultipleMemoizedHelpers
 describe ::Fuubar do

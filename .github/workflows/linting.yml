@@ -45,23 +45,16 @@ jobs:
           fetch-depth:            0
 
       - name:                     "Build Ruby"
-        uses:                     "actions/setup-ruby@v1"
+        uses:                     "ruby/setup-ruby@v1"
         with:
           ruby-version:           2.7
+          bundler-cache:          true
 
       - name:                     "Build Node"
 
         uses:                     "actions/setup-node@v2"
         with:
           node-version:           14
-
-      - name:                     "Install Ruby Gems"
-        run:                      >
-          gem install --no-document
-          rubocop
-          rubocop-rspec
-          rubocop-rails
-          rubocop-performance
 
       - name:                     "Install Node Modules"
         run:                      >
