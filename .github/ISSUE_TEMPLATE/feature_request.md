@@ -1,11 +1,9 @@
 ---
 name: Feature Request
 about: Suggest an idea for this project
-
 ---
 
-Current Problem
---------------------------------------------------------------------------------
+## Current Problem
 
 <!--
   If you want to replace existing behavior, describe the existing behavior
@@ -14,8 +12,7 @@ Current Problem
   Example: I'm always frustrated when...
 -->
 
-Potential Solution or New Behavior
---------------------------------------------------------------------------------
+## Potential Solution or New Behavior
 
 <!--- Tell us what the user should see -->
 

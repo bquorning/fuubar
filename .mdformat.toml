@@ -1,0 +1,8 @@
+number = true
+extensions = [
+  "front_matters",
+  "gfm",
+]
+exclude = [
+  "CHANGELOG.md",
+]

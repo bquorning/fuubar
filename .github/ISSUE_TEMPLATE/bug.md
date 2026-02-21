@@ -1,19 +1,19 @@
 ---
 name: Bug
 about: Create a report to help us improve
-
 ---
 
-Current Behavior
---------------------------------------------------------------------------------
+## Current Behavior
+
 <!-- Tell us what happens instead of the expected behavior -->
 
 ### Steps to Reproduce
 
 <!-- Example -->
-  1. Sign in as "marty@hillvalley.net"
-  2. Click "Current Orders"
-  3. Try to remove "Flux Capacitor" from the cart
+
+1. Sign in as "marty@hillvalley.net"
+2. Click "Current Orders"
+3. Try to remove "Flux Capacitor" from the cart
 
 ### Screenshot
 
@@ -22,36 +22,35 @@ Current Behavior
   photos of sketches, etc of what the app is currently doing here.
 -->
 
-Expected Behavior
---------------------------------------------------------------------------------
+## Expected Behavior
+
 <!-- Tell us what the user should see instead of what they're actually seeing. -->
 
-Environment
---------------------------------------------------------------------------------
+## Environment
 
-  * Device: <!-- Please specify here (eg iPhone 6s Plus) -->
+- Device: <!-- Please specify here (eg iPhone 6s Plus) -->
 
-  * OS:
+- OS:
 
-    * [ ] Windows
-    * [ ] macOS
-    * [ ] iOS
-    * [ ] Android
-    * [ ] Linux
-    * [ ] Other
+  - [ ] Windows
+  - [ ] macOS
+  - [ ] iOS
+  - [ ] Android
+  - [ ] Linux
+  - [ ] Other
 
-  * OS Version: <!-- Please specify here -->
+- OS Version: <!-- Please specify here -->
 
-  * Browser:
+- Browser:
 
-    * [ ] Chrome
-    * [ ] Safari
-    * [ ] Firefox
-    * [ ] Internet Explorer
-    * [ ] Edge
-    * [ ] Opera
+  - [ ] Chrome
+  - [ ] Safari
+  - [ ] Firefox
+  - [ ] Internet Explorer
+  - [ ] Edge
+  - [ ] Opera
 
-  * Browser Version: <!-- Please specify here -->
+- Browser Version: <!-- Please specify here -->
 
 <!--
 

@@ -1,38 +1,33 @@
 ---
-
-name:  Pull Request
+name: Pull Request
 about: Describe the changes you would like to make
-
 ---
 
 <!--lint ignore first-heading-level-->
 
-Why This Change Is Necessary
---------------------------------------------------------------------------------
+## Why This Change Is Necessary
 
 <!-- Identify the High Level Type of Change -->
 
-* [] Bug Fix
-* [] New Feature
+- [] Bug Fix
+- [] New Feature
 
 <!--
   Now describe to reviewers of your pull request what to expect in the PR,
   thereby allowing them to more easily identify and point out unrelated changes.
 -->
 
-How These Changes Address the Issue
---------------------------------------------------------------------------------
+## How These Changes Address the Issue
 
 <!--
   Describe, at a high level, what was done to affect change. If your change is
   obvious, you may be able to omit addressing this.
 -->
 
-Side Effects Caused By This Change
---------------------------------------------------------------------------------
+## Side Effects Caused By This Change
 
-* [] This Causes a Breaking Change
-* [] This Does Not Cause Any Known Side Effects
+- [] This Causes a Breaking Change
+- [] This Does Not Cause Any Known Side Effects
 
 <!--
   This is the most important topic to answer, as it can point out problems where
@@ -41,24 +36,22 @@ Side Effects Caused By This Change
   of a PR that is doing too many things.
 -->
 
-Screenshots
---------------------------------------------------------------------------------
+## Screenshots
 
 <!--
   Add screenshots of changes to the UI if appropriate, otherwise delete this
   section.
 -->
 
-Checklist
---------------------------------------------------------------------------------
+## Checklist
 
 <!--
   Go over all the following points, and put an `x` in all the boxes that apply.
 -->
 
-* [] I have run `rubocop` against the codebase
-* [] I have added tests to cover my changes
-* [] All new and existing tests passed
+- [] I have run `rubocop` against the codebase
+- [] I have added tests to cover my changes
+- [] All new and existing tests passed
 
 <!--
 

@@ -1,5 +1,4 @@
-Fuubar
-================================================================================
+# Fuubar
 
 <div align="center">
 
@@ -17,13 +16,12 @@ Fuubar
 
 <br>
 
-fuubar is an instafailing [RSpec][rspec] formatter that uses
+fuubar is an instafailing [RSpec] formatter that uses
 a progress bar instead of a string of letters and dots as feedback.
 
 ![examples][example-gif]
 
-Installation
---------------------------------------------------------------------------------
+## Installation
 
 ```ruby
 gem install fuubar
@@ -33,8 +31,7 @@ gem install fuubar
 gem 'fuubar'
 ```
 
-Usage
---------------------------------------------------------------------------------
+## Usage
 
 In order to use fuubar, you have three options.
 
@@ -63,14 +60,13 @@ RSpec.configure do |config|
 end
 ```
 
-Advanced Usage
---------------------------------
+## Advanced Usage
 
 ### Customizing The Bar
 
 fuubar exposes an RSpec configuration variable called
 `fuubar_progress_bar_options` which, when set will be passed directly to
-[ruby-progressbar][rpb-github] which does all the heavy lifting.  Take a look at
+[ruby-progressbar][rpb-github] which does all the heavy lifting. Take a look at
 the [ruby-progressbar documentation][rpb-docs] for details on all of the options
 you can pass in.
 
@@ -96,8 +92,8 @@ My Fuubar! <================================                  > 53.44% 00:12:31
 ### Hiding Pending/Skipped Spec Summary
 
 By default fuubar follows RSpec's lead and will dump out a summary of all of the
-pending specs in the suite once the test run is over.  This is a good idea
-because the additional noise is a nudge to fix those tests.  We realize however
+pending specs in the suite once the test run is over. This is a good idea
+because the additional noise is a nudge to fix those tests. We realize however
 that not all teams have the luxury of implementing all of the pending specs and
 therefore fuubar gives you the option of supressing that summary.
 
@@ -135,7 +131,7 @@ given ways to work around this problem.
 
 ##### Pry
 
-[Pry][pry] provides hooks that can be used to disable fuubar during a debugging
+[Pry] provides hooks that can be used to disable fuubar during a debugging
 session, you could for example add the following to your spec helper:
 
 ```ruby
@@ -152,7 +148,7 @@ end
 
 ##### Byebug
 
-Unfortunately [byebug][byebug] does not provide hooks, so your best bet is to
+Unfortunately [byebug] does not provide hooks, so your best bet is to
 disable auto-refresh manually before calling `byebug`.
 
 ```ruby
@@ -160,19 +156,18 @@ RSpec.configuration.fuubar_auto_refresh = false
 byebug
 ```
 
-Security
---------------------------------------------------------------------------------
+## Security
 
 fuubar is cryptographically signed. To be sure the gem you install hasn’t been
 tampered with, follow these steps:
 
-* Add my public key (if you haven’t already) as a trusted certificate
+- Add my public key (if you haven’t already) as a trusted certificate
 
   ```bash
   gem cert --add <(curl -Ls https://raw.github.com/thekompanee/fuubar/master/certs/thekompanee.pem)
   ```
 
-* Install fuubar telling it to use security checks when possible.
+- Install fuubar telling it to use security checks when possible.
 
   ```bash
   gem install fuubar -P MediumSecurity
@@ -184,8 +179,7 @@ tampered with, follow these steps:
 > This is necessary because fuubar has a dependency on RSpec which isn't signed,
 > and therefore we cannot use `HighSecurity`, which requires signed gems.
 
-Credits
---------------------------------------------------------------------------------
+## Credits
 
 fuubar was written by [Jeff Felchner][jefff-profile] and [Jeff
 Kreeftmeijer][jeffk-profile]
@@ -196,21 +190,20 @@ fuubar is maintained and funded by [The Kompanee, Ltd.][kompanee-site]
 
 The names and logos for The Kompanee are trademarks of The Kompanee, Ltd.
 
-License
---------------------------------------------------------------------------------
+## License
 
-fuubar is Copyright &copy; 2010-2021 Jeff Kreeftmeijer and Jeff Felchner. It is
+fuubar is Copyright © 2010-2021 Jeff Kreeftmeijer and Jeff Felchner. It is
 free software, and may be redistributed under the terms specified in the
-[LICENSE][license] file.
+[LICENSE] file.
 
-[byebug]:        https://github.com/deivid-rodriguez/byebug
-[example-gif]:   https://kompanee-public-assets.s3.amazonaws.com/readmes/fuubar-examples.gif
+[byebug]: https://github.com/deivid-rodriguez/byebug
+[example-gif]: https://kompanee-public-assets.s3.amazonaws.com/readmes/fuubar-examples.gif
 [jefff-profile]: https://github.com/jfelchner
 [jeffk-profile]: https://github.com/jeffkreeftmeijer
 [kompanee-logo]: https://kompanee-public-assets.s3.amazonaws.com/readmes/kompanee-horizontal-black.png
 [kompanee-site]: http://www.thekompanee.com
-[license]:       https://github.com/thekompanee/fuubar/blob/master/LICENSE.txt
-[pry]:           https://github.com/pry/pry
-[rpb-docs]:      https://github.com/jfelchner/ruby-progressbar/wiki/Options
-[rpb-github]:    https://github.com/jfelchner/ruby-progressbar
-[rspec]:         https://github.com/rspec
+[license]: https://github.com/thekompanee/fuubar/blob/master/LICENSE.txt
+[pry]: https://github.com/pry/pry
+[rpb-docs]: https://github.com/jfelchner/ruby-progressbar/wiki/Options
+[rpb-github]: https://github.com/jfelchner/ruby-progressbar
+[rspec]: https://github.com/rspec
