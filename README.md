@@ -11,7 +11,7 @@ Fuubar
 
 [![RubyGems Downloads](https://img.shields.io/gem/dt/fuubar.svg?style=flat-square&label=total-downloads)](https://rubygems.org/gems/fuubar)
 
-[![Build Status](https://img.shields.io/github/workflow/status/jfelchner/fuubar/Build?label=CI&style=flat-square&logo=github)](https://github.com/thekompanee/fuubar/actions?query=workflow%3ABuild)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jfelchner/fuubar/testing.yml?branch=master&label=CI&style=flat-square&logo=github)](https://github.com/thekompanee/fuubar/actions/workflows/testing.yml)
 
 </div>
 
