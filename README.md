@@ -2,25 +2,17 @@ Fuubar
 ================================================================================
 
 <div align="center">
-  <a href="https://rubygems.org/gems/fuubar" alt="RubyGems Version">
-    <img src="https://img.shields.io/gem/v/fuubar.svg?style=flat-square&label=current-version" alt="RubyGems Version" />
-  </a>
 
-  <a href="https://rubygems.org/gems/fuubar" alt="RubyGems Rank Overall">
-    <img src="https://img.shields.io/gem/rt/fuubar.svg?style=flat-square&label=total-rank" alt="RubyGems Rank Overall" />
-  </a>
+[![RubyGems Version](https://img.shields.io/gem/v/fuubar.svg?style=flat-square&label=current-version)](https://rubygems.org/gems/fuubar)
 
-  <a href="https://rubygems.org/gems/fuubar" alt="RubyGems Rank Daily">
-    <img src="https://img.shields.io/gem/rd/fuubar.svg?style=flat-square&label=daily-rank" alt="RubyGems Rank Daily" />
-  </a>
+[![RubyGems Rank Overall](https://img.shields.io/gem/rt/fuubar.svg?style=flat-square&label=total-rank)](https://rubygems.org/gems/fuubar)
 
-  <a href="https://rubygems.org/gems/fuubar" alt="RubyGems Downloads">
-    <img src="https://img.shields.io/gem/dt/fuubar.svg?style=flat-square&label=total-downloads" alt="RubyGems Downloads" />
-  </a>
+[![RubyGems Rank Daily](https://img.shields.io/gem/rd/fuubar.svg?style=flat-square&label=daily-rank)](https://rubygems.org/gems/fuubar)
 
-  <a href="https://github.com/thekompanee/fuubar/actions?query=workflow%3ABuild" alt="Build Status">
-    <img src="https://img.shields.io/github/workflow/status/jfelchner/fuubar/Build?label=CI&style=flat-square&logo=github" alt="Build Status" />
-  </a>
+[![RubyGems Downloads](https://img.shields.io/gem/dt/fuubar.svg?style=flat-square&label=total-downloads)](https://rubygems.org/gems/fuubar)
+
+[![Build Status](https://img.shields.io/github/workflow/status/jfelchner/fuubar/Build?label=CI&style=flat-square&logo=github)](https://github.com/thekompanee/fuubar/actions?query=workflow%3ABuild)
+
 </div>
 
 <br>
